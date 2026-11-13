@@ -1,0 +1,27 @@
+name: Verify Timmy
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check JavaScript syntax
+        run: |
+          node --check public/app.js
+          node --check api/chat.js
+          node --check api/transcribe.js
+      - name: Run API validation tests
+        run: npm test
+      - name: Run original foundation tests
+        run: npm run test:foundation
