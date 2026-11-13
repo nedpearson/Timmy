@@ -1,0 +1,5 @@
+{
+  "agents": ["chief_of_staff", "legal_research", "marketing", "finance", "operations", "engineering", "personal_assistant"],
+  "approval_required": ["send_message", "publish_content", "make_payment", "legal_filing", "production_deploy", "delete_data", "change_permissions"],
+  "workspaces": ["personal", "legal", "bridgebox", "window_world_assistant", "vow_os", "delta_ridge", "brickyard", "scagscapes", "boatpak"]
+}
