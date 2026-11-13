@@ -1,4 +1,4 @@
-import { HttpError, json, method, getUser, errorResponse } from './lib.js';
+import { HttpError, json, method, getUser, errorResponse } from './_lib.js';
 const allowedMime = new Map([
   ['audio/webm','webm'], ['audio/mp4','mp4'], ['audio/mpeg','mp3'],
   ['audio/wav','wav'], ['audio/ogg','ogg'], ['audio/aac','aac'], ['audio/x-m4a','m4a']

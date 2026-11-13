@@ -1,4 +1,4 @@
-import { config, json, errorResponse } from './lib.js';
+import { config, json, errorResponse } from './_lib.js';
 export default function handler(req, res) {
   if (req.method !== 'GET') return json(res, 405, { error: 'Method not allowed' });
   try {

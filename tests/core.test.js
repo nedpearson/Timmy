@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { validateChatBody, buildInstructions } from '../api/chat.js';
-import { HttpError, requireUuid, requireWorkspace, extractResponseText, bearer } from '../api/lib.js';
+import { HttpError, requireUuid, requireWorkspace, extractResponseText, bearer } from '../api/_lib.js';
 const ID='4ead154d-fab0-469e-ae01-051efc701112';
 test('request validation: approved workspace, length and ID',()=>{
  assert.deepEqual(validateChatBody({workspace:'personal',message:' hi ',conversationId:ID}),{workspace:'personal',message:'hi',conversationId:ID});
